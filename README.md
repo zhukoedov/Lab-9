@@ -23,8 +23,9 @@ HTML-страницу следует минимально оформить: за
 
 **Дополнительное задание**
 
-пока нет
+Сделать очистку ленты сообщений, запускаемую кнопкой "Clear".
 
 **Полезные ссылки**
 
-Руководство по запуску: https://flask.palletsprojects.com/en/0.12.x/quickstart/
+Руководство по запуску: https://flask.palletsprojects.com/en/0.12.x/quickstart/  
+Работы с SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application
