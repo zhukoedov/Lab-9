@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Main page</title>
+    <title>Best store!</title>
+    <script type="text/javascript" src="/static/update.js"></script>
+    <link href="static/store.css" rel="stylesheet">
 </head>
+
 <body>
-<h2>Messages</h2>
-<form method="post" action="/add_message">
-    <input type="text" name="text">
-    <input type="text" name="tag">
-    <button type="submit">Add post</button>
-</form>
-
-<h3>Messages feed</h3>
-{% for message in messages %}
-<div>{{ message.text }}
-    {% for tag in message.tags %}
-        <b>#{{ tag.text }}</b>
-    {% endfor %}
-</div>
-{% endfor %}
-
+    <h1>Furniture store:</h1>
+    <h3>Add new product:</h3>
+    <form>
+        <div>
+            <input type="text" name="prod_name" id="prod_name">
+            <label for="prod_name">Product name</label>
+        </div>
+        <div>
+            <input type="number" name="price" id="price">
+            <label for="price">Price (rub.)</label>
+        </div>
+        <button onClick="addProduct()">Add</button>
+    </form>
+    <ul>
+        {% for product in products_list %}
+        <li>
+            <div>
+                <div>{{ product['prod_name'] }}</div>
+                <div>{{ product['price'] }} rub.</div>
+                <input value="{{product['id']}}" onChange="updateProd(this)" name="in_stock" type="checkbox" {% if product.in_stock %} checked {% endif %}>
+                <label for="in_stock">In stock</label>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
