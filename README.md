@@ -27,5 +27,5 @@ HTML-страницу следует минимально оформить: за
 
 **Полезные ссылки**
 
-Руководство по запуску: https://flask.palletsprojects.com/en/0.12.x/quickstart/  
+Руководство по запуску: https://flask.palletsprojects.com/en/2.3.x/quickstart/  
 Работа с SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/#a-minimal-application
